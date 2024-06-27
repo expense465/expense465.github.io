@@ -1,2 +1,2 @@
-# imnafissadik.github.io
-This repo will be used to host my portfolio website
+# ExpenseTracker
+this will be expenseTracker App for my personal use
