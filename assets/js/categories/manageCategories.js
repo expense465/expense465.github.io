@@ -1,5 +1,5 @@
 import { db } from "../fireBaseConfig.js";
-// import { ref, onValue, push, set, update, remove } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-database.js";
+import { ref, onValue, push, set, update, remove } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-database.js";
 
 document.addEventListener('DOMContentLoaded', function () {
     const categoryTableBody = document.getElementById('categoryTableBody');
