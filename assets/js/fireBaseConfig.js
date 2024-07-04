@@ -11,7 +11,7 @@ const firebaseConfig = {
     messagingSenderId: "674219928023",
     appId: "1:674219928023:web:724532785517ad65758392",
     measurementId: "G-DH4X850KP0",
-    databaseURL: "https://expensetrackerv1-690e6-default-rtdb.firebaseio.com"
+    databaseURL: "https://expensetrackerv1-690e6-default-rtdb.firebaseio.com/"
 };
 
 const app = initializeApp(firebaseConfig);
