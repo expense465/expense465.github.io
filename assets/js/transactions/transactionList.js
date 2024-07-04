@@ -20,7 +20,7 @@ function getOrdinal(n) {
 
 
 function fetchTransactions() {
-    const userId = 'shakhawathossain'; // Your user ID
+    const userId = 'shakhawatt'; // Your user ID
     const transactionsRef = ref(db, `users/${userId}/transactions`);
 
     onValue(transactionsRef, (snapshot) => {

@@ -7,7 +7,7 @@ function getQueryParam(param) {
 }
 
 function fetchTransactionDetails(transactionId) {
-    const userId = 'shakhawathossain';
+    const userId = 'shakhawatt';
     const transactionRef = ref(db, `users/${userId}/transactions/${transactionId}`);
 
     onValue(transactionRef, (snapshot) => {
@@ -26,7 +26,7 @@ function fetchTransactionDetails(transactionId) {
 document.getElementById('transactionForm').addEventListener('submit', function(e) {
     e.preventDefault();
     const transactionId = getQueryParam('id');
-    const transactionRef = ref(db, `users/shakhawathossain/transactions/${transactionId}`);
+    const transactionRef = ref(db, `users/shakhawatt/transactions/${transactionId}`);
 
     const updatedData = {
         expenseType: document.getElementById('expenseType').value,
@@ -45,7 +45,7 @@ document.getElementById('transactionForm').addEventListener('submit', function(e
 
 document.getElementById('deleteBtn').addEventListener('click', function() {
     const transactionId = getQueryParam('id');
-    const transactionRef = ref(db, `users/shakhawathossain/transactions/${transactionId}`);
+    const transactionRef = ref(db, `users/shakhawatt/transactions/${transactionId}`);
 
     // Use set() with null to remove data in Firebase 9.x
     set(transactionRef, null).then(() => {

@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const addCategoryForm = document.getElementById('addCategoryForm');
     const categoryNameInput = document.getElementById('categoryName'); // Input for category name
     const addCategoryModal = new bootstrap.Modal(document.getElementById('addCategoryModal')); // Bootstrap modal instance
-    const userId = 'shakhawathossain';  // Define the user ID here or retrieve from user authentication session
+    const userId = 'shakhawatt';  // Define the user ID here or retrieve from user authentication session
 
     addCategoryForm.addEventListener('submit', function(e) {
         e.preventDefault();

@@ -5,7 +5,7 @@ const expenseForm = document.getElementById('expenseForm');
 const expenseTypeSelect = document.getElementById('expenseType');
 const transactionTypeSelect = document.getElementById('transactionType');
 const transactionLabel = document.getElementById('transactionLabel');
-const userId = 'shakhawathossain';  // Define the user ID here or retrieve from user authentication session
+const userId = 'shakhawatt';  // Define the user ID here or retrieve from user authentication session
 
 // Handle transaction type change
 transactionTypeSelect.addEventListener('change', () => {

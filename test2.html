@@ -74,7 +74,7 @@
     <script src="assets/js/fireBaseConfig.js"></script>
     <script>
         function fetchTransactions() {
-            const userId = 'shakhawathossain';
+            const userId = 'Shakhawatt';
             const transactionsRef = ref(getDatabase(), `users/${userId}/transactions`);
             onValue(transactionsRef, (snapshot) => {
                 const data = snapshot.val();
