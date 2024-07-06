@@ -71,7 +71,7 @@ function fetchTransactions() {
                         <td>${transaction.amount || ''}Tk</td>
                     `;
                     row.addEventListener('click', () => {
-                        window.location.href = 'transactiondetails.html?id=' + transaction.id;
+                        window.location.href = 'transactiondetails.html';
                     });
                     tbody.appendChild(row);
                 }
