@@ -13,6 +13,7 @@ function fetchTransactionDetails(transactionId) {
     onValue(transactionRef, (snapshot) => {
         const data = snapshot.val();
         if (data) {
+            document.getElementById('transactionType').value = data.transactionType || '';
             document.getElementById('expenseType').value = data.expenseType || '';
             document.getElementById('amount').value = data.amount || '';
             document.getElementById('date').value = data.date || '';
