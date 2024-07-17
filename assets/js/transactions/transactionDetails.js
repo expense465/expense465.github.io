@@ -6,12 +6,39 @@ function getQueryParam(param) {
     return urlParams.get(param);
 }
 
+function populateOptions(filterExpense) {
+    const selectElement = document.getElementById('expenseType');
+    const data = JSON.parse(localStorage.getItem('categoriesOnDb'));
+    // console.log(data);
+    // console.log(filterExpense);
+    var isExpnese =  filterExpense == "Expense" ? true: false ;
+   
+
+    // Clear existing options except the first "Select" option
+    selectElement.length = 1;
+
+    // Iterate through each key in the data object
+    for (const key in data) {
+        const item = data[key];
+        
+        // Check the isExpense property based on the filterExpense parameter
+        if (item.isExpense === isExpnese) {
+            // Create a new option element
+            const option = new Option(item.name, item.value);
+            // Append the option to the select element
+            selectElement.add(option);
+        }
+    }
+}
+
 function fetchTransactionDetails(transactionId) {
     const userId = 'shakhawatt';
     const transactionRef = ref(db, `users/${userId}/transactions/${transactionId}`);
 
     onValue(transactionRef, (snapshot) => {
         const data = snapshot.val();
+        // console.log(data);
+        populateOptions(data.transactionType);
         if (data) {
             document.getElementById('transactionType').value = data.transactionType || '';
             document.getElementById('expenseType').value = data.expenseType || '';
@@ -63,3 +90,4 @@ if (transactionId) {
 } else {
     alert('No transaction ID provided.');
 }
+

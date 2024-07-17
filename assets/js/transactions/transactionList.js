@@ -42,7 +42,7 @@ function fetchTransactions() {
                 if(transaction.transactionType ==='Expense'){
                     const formattedDate = formatDate(transaction.date);
                     const monthYear = getMonthYear(transaction.date);
-                    console.log(transaction)
+                    // console.log(transaction)
                     // Check if it's a new month and year, or last transaction
                     if (monthYear !== lastMonthYear || index === array.length - 1) {
                         if (lastMonthYear) { // Not the first transaction, put the total row for the previous month

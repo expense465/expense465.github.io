@@ -82,14 +82,17 @@
 </div>
 
 <script>
+
+
+
     document.addEventListener('DOMContentLoaded', () => {
         const tableData = JSON.parse(localStorage.getItem('transactionsTableData'));
-        console.log(tableData)
+        // console.log(tableData)
         if (tableData && tableData.length > 0) {
             const currentMonthData = tableData[0]; // First object which is the current month data
             const { expenses, cashins,monthYear } = currentMonthData;
             document.getElementById('SummaryLabel').textContent= monthYear+ " Sumamry"
-            console.log(monthYear)
+            // console.log(monthYear)
 
             // Calculate total expenses and total cashin
             const totalExpenses = Object.values(expenses).reduce((acc, value) => acc + value, 0);
@@ -107,6 +110,9 @@
             document.getElementById('currentMonthTable').innerHTML = '<tr><td colspan="2">No data available</td></tr>';
         }
     });
+
+
+
 </script>
 
 <!-- Bootstrap 5 JS and dependencies -->

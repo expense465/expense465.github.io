@@ -32,6 +32,8 @@ document.addEventListener('DOMContentLoaded', function () {
     // Load and display categories
     onValue(ref(db, `users/${userId}/categories`), (snapshot) => {
         const data = snapshot.val();
+        // console.log(data);
+        localStorage.setItem('categoriesOnDb', JSON.stringify(data));
         categoryTableBody.innerHTML = '';
         if (data) {
             Object.keys(data).forEach(key => {
